@@ -1,0 +1,88 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+.login form {
+    border: 5px solid #FFF;
+}
+
+.login input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.login button {
+    background-color: #3f51b5;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.login button:hover {
+    opacity: 0.8;
+}
+
+.login .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.login .imgcontainer {
+    margin: 0;
+}
+
+.login img.avatar {
+ width: 100%;
+}
+
+.login .containers {
+    padding: 16px;
+    background: #abaaaa;
+    text-align: left;
+}
+
+.login span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+#heat-body h1{
+    padding: 0px 0 20px 0;
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 30px;
+  }
+  
+  #heat-body{
+      padding: 20px 40px;
+      display: inline-table;
+      box-shadow: 0px 1px 5px #000;
+      border-top: 4px solid #3f51b5;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      margin: 20px 0;
+  }

@@ -1,20 +1,152 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<mat-toolbar color="primary" id="logo" class="fixed-top">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-9">
+      <img id="img-logo" src="https://angular.io/assets/images/logos/angular/logo-nav@2x.png" alt="">
+    </div>
+    <div class="col-lg-3">
+      <img class="img" src="http://i.imgur.com/FUIF3rW.png" alt="image">
+      <img src="http://www.freeiconspng.com/uploads/twitter-icon-9.png" alt="image" class="img">
+      <img class="img" src="http://www.rayondesoleilcannes.com/images/facebook-rds.png" alt="image">
+    </div>
+  </div>
+ </div>
+ </mat-toolbar>
+<!-- Start Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/home">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a routerLink="/login" class="nav-link">Login <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/about" class="nav-link">About</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Menu
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/mynewcomponent">Torials</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/myform" class="nav-link">Contact</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2 search" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
 
+<router-outlet></router-outlet>
+<!-- End Navbar -->
+
+
+<div class="footer ">
+  <div class="container">
+    <div class="row">
+     <div class="col-lg-3  pading-top">
+       <ul class="list-group">
+         <li class="list-group-item">Cras justo odio</li>
+         <li class="list-group-item">Dapibus ac facilisis in</li>
+         <li class="list-group-item">Morbi leo risus</li>
+         <li class="list-group-item">Porta ac consectetur ac</li>
+         <li class="list-group-item">Vestibulum at eros</li>
+         <li class="list-group-item">Cras justo odio</li>
+         <li class="list-group-item">Dapibus ac facilisis in</li>
+         <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+         <li class="list-group-item warn"><button mat-raised-button color="warn">Read More</button></li>
+       </ul>
+     </div>
+     <div class="col-lg-5 pading-top">
+       <mat-card>
+         <mat-card-content>
+           <h2 class="example-h2">Progress spinner configuration</h2>
+
+           <section class="example-section">
+             <label class="example-margin">Color:</label>
+             <mat-radio-group [(ngModel)]="color">
+               <mat-radio-button class="example-margin" value="primary">
+                 Primary
+               </mat-radio-button>
+               <mat-radio-button class="example-margin" value="accent">
+                 Accent
+               </mat-radio-button>
+               <mat-radio-button class="example-margin" value="warn">
+                 Warn
+               </mat-radio-button>
+             </mat-radio-group>
+           </section>
+
+           <section class="example-section">
+             <label class="example-margin">Mode:</label>
+             <mat-radio-group [(ngModel)]="mode">
+               <mat-radio-button class="example-margin" value="determinate">
+                 Determinate
+               </mat-radio-button>
+               <mat-radio-button class="example-margin" value="indeterminate">
+                 Indeterminate
+               </mat-radio-button>
+             </mat-radio-group>
+           </section>
+
+           <section class="example-section" *ngIf="mode == 'determinate'">
+             <label class="example-margin">Progress:</label>
+             <mat-slider class="example-margin" [(ngModel)]="value"></mat-slider>
+           </section>
+         </mat-card-content>
+       </mat-card>
+       <mat-card>
+         <mat-card-content>
+           <h2 class="example-h2">Result</h2>
+
+           <mat-progress-spinner
+               class="example-margin"
+               [color]="color"
+               [mode]="mode"
+               [value]="value">
+           </mat-progress-spinner>
+         </mat-card-content>
+       </mat-card>
+
+     </div>
+     <div class="col-lg-4  pading-top">
+       <mat-card class="example-card">
+         <mat-card-header>
+           <div mat-card-avatar class="example-header-image"></div>
+           <mat-card-title>Issam Drmas</mat-card-title>
+           <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+         </mat-card-header>
+         <img mat-card-image src="http://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+         <mat-card-content>
+           <p>
+             The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+             A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+             bred for hunting.
+           </p>
+         </mat-card-content>
+         <mat-card-actions>
+           <button mat-raised-button color="primary">Like</button>
+           <button mat-raised-button color="accent">Share</button>
+         </mat-card-actions>
+       </mat-card>
+
+     </div>
+
+    </div>
+    <h4>All Copy Right @ Reseved to Asmail 2017 <img id="img" src="https://material.angular.io/assets/img/homepage/angular-white-transparent.svg" alt=""> </h4>
+  </div>
+</div>

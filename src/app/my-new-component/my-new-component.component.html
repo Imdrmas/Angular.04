@@ -1,0 +1,51 @@
+<div class="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-lg-offset-3"></div>
+            <div class="col-lg-6">
+              <div id="heat-body"><h1> Torials Angular 4</h1></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+<div class="torials">
+ <div class="container">
+   <div class="row">
+     <div class="col-lg-6">
+    
+               <div class="card text-left">
+                    <div class="card-header">
+                    <h3> My Best Languags </h3>
+                    </div>
+                    <div class="card-body">
+                     <ul class="list-group" *ngFor="let language of myFavLang">
+                     <li class="list-group-item">{{language.name}} - {{language.type}}</li>   
+                     </ul>
+                     </div>
+                    <div class="card-footer text-muted">
+                      2 days ago
+                    </div>
+             </div>
+     </div>
+
+     <div class="col-lg-6">
+            
+                       <div class="card text-left">
+                            <div class="card-header">
+                            <h3> My Best City </h3>
+                            </div>
+                            <div class="card-body">
+                             <ul class="list-group" *ngFor="let city of myFavCity">
+                             <li class="list-group-item">{{city.name}} - {{city.type}}</li>   
+                             </ul>
+                             </div>
+                            <div class="card-footer text-muted">
+                              2 days ago
+                            </div>
+                     </div>
+             </div>
+   </div>
+ </div>
+</div>

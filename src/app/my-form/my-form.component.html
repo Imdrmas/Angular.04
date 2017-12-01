@@ -1,0 +1,76 @@
+<section id="myform">
+ <div class="about">
+   <div class="container">
+     <div class="row">
+       <div class="col-lg-3 col-lg-offset-3"></div>
+       <div class="col-lg-6">
+         <mat-toolbar class="heat-body"><h1> Contact Us </h1></mat-toolbar>
+       </div>
+     </div>
+   </div>
+ </div>
+ <div class="container">
+  <div class="row">
+    <div class="col-md-3 col-md-offset-3"></div>
+     <div class="col-md-6">
+      <div *ngIf="!name; else forminfo">
+
+        <form [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)">
+
+          <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input formControlName="name"
+                   class="form-control form-control-sm"
+                   type="text"
+                   placeholder="Enter Your Name">
+
+          </div>
+          <!-- This goes underneath the Name label -->
+         <div class="alert" *ngIf="!rForm.controls['name'].valid && rForm.controls['name'].touched">{{ titleAlert }}</div>
+
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Description</label>
+            <textarea
+             formControlName="description"
+             class="form-control form-control-sm"
+             id="exampleFormControlTextarea1"
+             rows="3"
+             placeholder="Enter Your Comments"></textarea>
+          </div>
+          <div class="alert" *ngIf="!rForm.controls['description'].valid && rForm.controls['description'].touched">You must specify a description that's between 30 and 500 characters.</div>
+
+          <div class="form-check">
+            <label class="form-check-label">
+              <input
+              type="checkbox"
+              class="form-check-input"
+              name="validate"
+              formControlName="validate"
+              value="1">
+              Check me out
+            </label>
+          </div>
+
+          <input
+          type="submit"
+          class="button expanded"
+          value="Send Your Message"
+          [disabled]="!rForm.valid">
+        </form>
+
+      </div>
+
+      <ng-template #forminfo>
+        <div class="form-container">
+          <div class="row columns">
+              <h1>{{ name }}</h1>
+
+              <p>{{ description }}</p>
+          </div>
+        </div>
+      </ng-template>
+
+    </div>
+  </div>
+</div>
+</section>

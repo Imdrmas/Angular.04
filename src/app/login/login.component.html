@@ -1,0 +1,33 @@
+
+<div class="login">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-lg-offset-3"></div>
+      <div class="col-lg-6">
+      <div id="heat-body"><h1>Login to go your profile</h1></div>
+
+      <form (submit)="loginuser($event)">
+        <div class="imgcontainer">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV0ksEKu9iylX5Nay30CJ4UNtPnMkiIaKEO42QbZdY8DTCQZHR" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="containers">
+          <label><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <button type="submit">Login</button>
+          <input type="checkbox" checked="checked"> Remember me
+        </div>
+
+         <div class="container" style="background-color:#f1f1f1">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+      </div>
+    </div>
+    </div>
+  </div>
